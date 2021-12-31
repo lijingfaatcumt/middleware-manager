@@ -9,7 +9,7 @@ class MiddlewareManager has three api as follows:
     <br/>&ensp;&ensp;// remove the middleware from the middleware manager
     <br/>&ensp;&ensp;//the returned is the middleware manager instance
     <br/>&ensp;&ensp;remove(middleware): MiddlewareManager
-    <br/>&ensp;&ensp;>/ // run all middlewares of the middleware manager
+    <br/>&ensp;&ensp;>// run all middlewares of the middleware manager
     <br/>&ensp;&ensp;// return the finally result
     <br/>&ensp;&ensp;run(): Promise
 middleware is a function that accept two params: config, and next function, config will transferred between middleware function hand by hand. next is a function in order to call next middleware function.
