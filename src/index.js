@@ -17,10 +17,10 @@ export default class MiddlewareManager {
   run(config) {
     const { length } = this.middlewares;
     function innerRun(config, index) {
-      const middleware = this.middlewares(index);
-      if (index === length - 1) {
-        return middleware(config);
+      if (index === length) {
+        return Promise.resolve(config);
       } else {
+        const middleware = this.middlewares(index);
         return middleware(config, (config) => innerRun(config, index++));
       }
     }
