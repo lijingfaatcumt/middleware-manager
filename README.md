@@ -3,11 +3,11 @@ a middleware manager of implements onion liked
 
 ## api introduction
 class MiddlewareManager has three api as follows:
-    / // add a middleware to the middleware manager, the returned is the middleware manager instance
+    <br/>// add a middleware to the middleware manager, the returned is the middleware manager instance
     use(middleware): MiddlewareManager
-    / // remove the middleware from the middleware manager, the returned is the middleware manager instance
+    <br/>// remove the middleware from the middleware manager, the returned is the middleware manager instance
     remove(middleware): MiddlewareManager
-    / // run all middlewares of the middleware manager, and return the finally result
+    <br/>>/ // run all middlewares of the middleware manager, and return the finally result
     run(): Promise
 middleware is a function that accept two params: config, and next function, config will transferred between middleware function hand by hand. next is a function in order to call next middleware function.
 
